@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 - ng new taiwan --style=scss
+- npm install @angular/material@6.2.1 --save
+- npm install @angular/cdk@6.2.1 --save
+- npm install --save @angular/animations@6.0.6
+- npm install --save hammerjs@2.0.8
+- npm install --save @angular/flex-layout@6.0.0-beta.16
+- ng generate component header
+- npm install font-awesome@4.7.0 --save
+
 
 ## Development server
 
