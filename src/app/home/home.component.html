@@ -6,19 +6,19 @@
      fxLayoutGap="10px">
 
 
-  <mat-card *ngIf="nature" fxFlex [@expand]>
+  <mat-card *ngIf="mountain" fxFlex [@expand]>
     <mat-card-header>
       <div mat-card-avatar></div>
       <mat-card-title>
-        <h3>{{nature.name | uppercase}}</h3>
+        <h3>{{mountain.name | uppercase}}</h3>
       </mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{BaseURL + nature.image}}" alt={{nature.name}}>
+    <img mat-card-image src="{{BaseURL + mountain.image}}" alt={{mountain.name}}>
     <mat-card-content>
-      <p>{{nature.description}}</p>
+      <p>{{mountain.description}}</p>
     </mat-card-content>
 
-    <div [hidden]="culture || errMess">
+    <div [hidden]="mountain || errMess">
       <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
     </div>
     <div *ngIf="errMess">

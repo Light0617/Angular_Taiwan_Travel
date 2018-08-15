@@ -10,6 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - ng generate component header
 - npm install font-awesome@4.7.0 --save
 - npm install --save ngx-restangular@3.0.0
+- npm install mongoose --save
 
 
 ## Development server

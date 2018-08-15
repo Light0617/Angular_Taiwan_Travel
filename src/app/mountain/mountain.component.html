@@ -8,14 +8,14 @@
     </div>
   </div>
 
-  <div fxFlex *ngIf="natures" [@expand]>
+  <div fxFlex *ngIf="mountains" [@expand]>
      <mat-grid-list cols="2" rowHeight="200px">
-       <mat-grid-tile *ngFor="let nature of natures"
-                       [routerLink] = "['/naturedetail', nature._id]"
+       <mat-grid-tile *ngFor="let mountain of mountains"
+                       [routerLink] = "['/mountaindetail', mountain._id]"
                        appHighlight>
-         <img height="200px" src="{{BaseURL + nature.image}}" alt={{nature.name}}>
+         <img height="200px" src="{{BaseURL + mountain.image}}" alt={{mountain.name}}>
          <mat-grid-tile-footer>
-            <h1 matLine>{{nature.name | uppercase}}</h1>
+            <h1 matLine>{{mountain.name | uppercase}}</h1>
           </mat-grid-tile-footer>
        </mat-grid-tile>
      </mat-grid-list>
@@ -24,7 +24,7 @@
     <h2>Error</h2>
     <h4>{{errMess}}</h4>
   </div>
-  <div [hidden]="cultures || errMess">
+  <div [hidden]="mountains || errMess">
     <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
