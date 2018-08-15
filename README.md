@@ -9,6 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - npm install --save @angular/flex-layout@6.0.0-beta.16
 - ng generate component header
 - npm install font-awesome@4.7.0 --save
+- npm install --save ngx-restangular@3.0.0
 
 
 ## Development server

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NatureComponent } from './nature.component';
+import { MountainComponent } from './mountain.component';
 
-describe('NatureComponent', () => {
-  let component: NatureComponent;
-  let fixture: ComponentFixture<NatureComponent>;
+describe('MountainComponent', () => {
+  let component: MountainComponent;
+  let fixture: ComponentFixture<MountainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NatureComponent ]
+      declarations: [ MountainComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NatureComponent);
+    fixture = TestBed.createComponent(MountainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

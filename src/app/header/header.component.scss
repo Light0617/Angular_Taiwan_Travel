@@ -16,14 +16,39 @@
 }
 
 .header{
-  height: 40vh;
-  background-image: linear-gradient(
-  to right bottom,
-      rgba($background-light,0.2),
-      rgba($background-dark,0.2)),
-  url('../../assets/header.jpg');
-  background-position: top;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
   position: relative;
   clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
-  //color:floralwhite;
+  -webkit-animation-name: "loops";
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes "loops" {
+  0% {
+    background-image: linear-gradient(
+    to right bottom,
+        rgba($background-light,0.4),
+        rgba($background-dark,0.4)),
+    url('../../assets/header1.jpg');
+  }
+
+   50% {
+     background-image: linear-gradient(
+     to right bottom,
+         rgba($background-light,0.4),
+         rgba($background-dark,0.4)),
+     url('../../assets/header2.jpg');
+     opacity: 1;
+   }
+   100% {
+     background-image: linear-gradient(
+     to right bottom,
+         rgba($background-light,0.4),
+         rgba($background-dark,0.4)),
+     url('../../assets/header3.jpg');
+     opacity: 1;
+   }
 }

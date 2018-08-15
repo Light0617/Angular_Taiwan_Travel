@@ -5,15 +5,20 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { NatureComponent } from './nature/nature.component';
 import { FoodComponent } from './food/food.component';
 import { CultureComponent } from './culture/culture.component';
+import { AboutComponent } from './about/about.component';
+import { baseURL } from './shared/baseurl';
+
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { RestangularModule, Restangular } from 'ngx-restangular';
+import { RestangularConfigFactory } from './shared/restConfig';
+
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
@@ -29,9 +34,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-
 import 'hammerjs';
-import { AboutComponent } from './about/about.component';
+import { MountainComponent } from './mountain/mountain.component';
 
 @NgModule({
   declarations: [
@@ -39,10 +43,10 @@ import { AboutComponent } from './about/about.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    NatureComponent,
     FoodComponent,
     CultureComponent,
-    AboutComponent
+    AboutComponent,
+    MountainComponent
   ],
   imports: [
     BrowserModule,
@@ -63,8 +67,11 @@ import { AboutComponent } from './about/about.component';
     MatSlideToggleModule,
 
     AppRoutingModule,
+    RestangularModule.forRoot(RestangularConfigFactory),
   ],
-  providers: [],
+  providers: [
+    {provide: 'BaseURL', useValue: baseURL}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

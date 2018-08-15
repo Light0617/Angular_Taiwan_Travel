@@ -1,3 +1,31 @@
-<p>
-  culture works!
-</p>
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+      <h3> Culture </h3>
+    </div>
+  </div>
+
+  <div fxFlex *ngIf="cultures" [@expand]>
+     <mat-grid-list cols="2" rowHeight="200px">
+       <mat-grid-tile *ngFor="let culture of cultures"
+                       [routerLink] = "['/culturedetail', culture._id]"
+                       appHighlight>
+         <img height="200px" src="{{BaseURL + culture.image}}" alt={{culture.name}}>
+         <mat-grid-tile-footer>
+            <h1 matLine>{{culture.name | uppercase}}</h1>
+          </mat-grid-tile-footer>
+       </mat-grid-tile>
+     </mat-grid-list>
+  </div>
+  <div *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>{{errMess}}</h4>
+  </div>
+  <div [hidden]="cultures || errMess">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
+
+</div>

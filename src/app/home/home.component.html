@@ -1,3 +1,72 @@
-<p>
-  home works!
-</p>
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px">
+
+
+  <mat-card *ngIf="nature" fxFlex [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{nature.name | uppercase}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{BaseURL + nature.image}}" alt={{nature.name}}>
+    <mat-card-content>
+      <p>{{nature.description}}</p>
+    </mat-card-content>
+
+    <div [hidden]="culture || errMess">
+      <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+    </div>
+    <div *ngIf="errMess">
+      <h2>Error</h2>
+      <h4>{{errMess}}</h4>
+    </div>
+  </mat-card>
+
+  <mat-card *ngIf="culture" fxFlex [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{culture.name | uppercase}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{BaseURL + culture.image}}" alt="{{BaseURL + culture.image}}"/>
+    <mat-card-content>
+      <p>{{culture.description}}</p>
+    </mat-card-content>
+    <div *ngIf="errMess">
+      <h2>Error</h2>
+      <h4>{{errMess}}</h4>
+    </div>
+
+  </mat-card>
+  <div [hidden]="culture || errMess">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
+
+  <mat-card *ngIf="food" fxFlex [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{food.name | uppercase}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{BaseURL + food.image}}" alt="{{BaseURL + food.image}}"/>
+    <mat-card-content>
+      <p>{{food.description}}</p>
+    </mat-card-content>
+
+    <div [hidden]="food || errMess">
+      <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+    </div>
+    <div *ngIf="errMess">
+      <h2>Error</h2>
+      <h4>{{errMess}}</h4>
+    </div>
+  </mat-card>
+
+</div>

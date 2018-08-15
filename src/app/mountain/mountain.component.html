@@ -4,18 +4,18 @@
 
   <div fxFlex>
     <div>
-      <h3> Food </h3>
+      <h3> Nature </h3>
     </div>
   </div>
 
-  <div fxFlex *ngIf="foods" [@expand]>
+  <div fxFlex *ngIf="natures" [@expand]>
      <mat-grid-list cols="2" rowHeight="200px">
-       <mat-grid-tile *ngFor="let food of foods"
-                       [routerLink] = "['/fooddetail', food._id]"
+       <mat-grid-tile *ngFor="let nature of natures"
+                       [routerLink] = "['/naturedetail', nature._id]"
                        appHighlight>
-         <img height="200px" src="{{BaseURL + food.image}}" alt={{food.name}}>
+         <img height="200px" src="{{BaseURL + nature.image}}" alt={{nature.name}}>
          <mat-grid-tile-footer>
-            <h1 matLine>{{food.name | uppercase}}</h1>
+            <h1 matLine>{{nature.name | uppercase}}</h1>
           </mat-grid-tile-footer>
        </mat-grid-tile>
      </mat-grid-list>
