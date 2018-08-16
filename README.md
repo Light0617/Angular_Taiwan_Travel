@@ -27,5 +27,21 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 
 ## DEMO
+### Header
+![website homepage](./demo/header.png)
 ### About
 ![website homepage](./demo/about.png)
+### Home
+![website homepage](./demo/home.png)
+### nature
+![website homepage](./demo/nature.png)
+### nature detail
+![website homepage](./demo/nature_detail.png)
+### culture
+![website homepage](./demo/culture.png)
+### culture detail
+![website homepage](./demo/culture_detail.png)
+### food
+![website homepage](./demo/food.png)
+### food detail
+![website homepage](./demo/food_detail.png)

@@ -12,7 +12,7 @@ const mountainRouter = require('./server/routes/mountainRouter');
 const app = express();
 
 const mongoose = require('mongoose');
-const url = 'mongodb://localhost:27017/conFusion';
+const url = 'mongodb://localhost:27017/taiwan';
 const connect = mongoose.connect(url);
 
 connect.then((db) => {
