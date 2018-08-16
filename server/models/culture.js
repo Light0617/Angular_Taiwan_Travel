@@ -16,6 +16,10 @@ var cultureSchema = new Schema({
     description: {
         type: String,
         default: ''
+    },
+    starts: {
+        type: Number,
+        default: 5
     }
   }, {
     timestamps: true

@@ -13,7 +13,7 @@
        <mat-grid-tile *ngFor="let mountain of mountains"
                        [routerLink] = "['/mountaindetail', mountain._id]"
                        appHighlight>
-         <img height="200px" src="{{BaseURL + mountain.image}}" alt={{mountain.name}}>
+         <img height="200px" width="300px" src="{{BaseURL + mountain.image}}" alt={{mountain.name}}>
          <mat-grid-tile-footer>
             <h1 matLine>{{mountain.name | uppercase}}</h1>
           </mat-grid-tile-footer>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 
 import { Mountain } from '../shared/mountain';
@@ -23,7 +23,8 @@ export class MountainComponent implements OnInit {
   mountains: Mountain[];
   errMess: string;
 
-  constructor(private mountainService: MountainService) { }
+  constructor(private mountainService: MountainService,
+              @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
     this.mountainService.getMountains()

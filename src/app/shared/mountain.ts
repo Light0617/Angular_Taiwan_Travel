@@ -4,4 +4,5 @@ export class Mountain {
   image: string;
   featured: boolean;
   description: string;
+  starts: number;
 }

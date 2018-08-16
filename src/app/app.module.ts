@@ -36,6 +36,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import 'hammerjs';
 import { MountainComponent } from './mountain/mountain.component';
+import { FoodDetailComponent } from './food-detail/food-detail.component';
+import { MountainDetailComponent } from './mountain-detail/mountain-detail.component';
+import { CultureDetailComponent } from './culture-detail/culture-detail.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { MountainComponent } from './mountain/mountain.component';
     FoodComponent,
     CultureComponent,
     AboutComponent,
-    MountainComponent
+    MountainComponent,
+    FoodDetailComponent,
+    MountainDetailComponent,
+    CultureDetailComponent
   ],
   imports: [
     BrowserModule,

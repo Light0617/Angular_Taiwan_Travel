@@ -4,4 +4,5 @@ export class Culture {
   image: string;
   featured: boolean;
   description: string;
+  starts: number;
 }

@@ -16,6 +16,10 @@ var mountainSchema = new Schema({
     description: {
         type: String,
         default: ''
+    },
+    starts: {
+        type: Number,
+        default: 5
     }
   }, {
     timestamps: true

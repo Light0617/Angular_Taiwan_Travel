@@ -4,4 +4,6 @@ export class Food {
   image: string;
   featured: boolean;
   description: string;
+  delicious: number;
+  cost: number;
 }

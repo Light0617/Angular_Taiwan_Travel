@@ -13,7 +13,7 @@
        <mat-grid-tile *ngFor="let culture of cultures"
                        [routerLink] = "['/culturedetail', culture._id]"
                        appHighlight>
-         <img height="200px" src="{{BaseURL + culture.image}}" alt={{culture.name}}>
+         <img height="200px" width="300px" src="{{BaseURL + culture.image}}" alt={{culture.name}}>
          <mat-grid-tile-footer>
             <h1 matLine>{{culture.name | uppercase}}</h1>
           </mat-grid-tile-footer>

@@ -16,6 +16,14 @@ var foodSchema = new Schema({
     description: {
         type: String,
         default: ''
+    },
+    delicious: {
+        type: Number,
+        default: 5
+    },
+    cost: {
+        type: Number,
+        default: 5
     }
   }, {
     timestamps: true

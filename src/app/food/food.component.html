@@ -13,7 +13,7 @@
        <mat-grid-tile *ngFor="let food of foods"
                        [routerLink] = "['/fooddetail', food._id]"
                        appHighlight>
-         <img height="200px" src="{{BaseURL + food.image}}" alt={{food.name}}>
+         <img height="200px" width="300px" src="{{BaseURL + food.image}}" alt={{food.name}}>
          <mat-grid-tile-footer>
             <h1 matLine>{{food.name | uppercase}}</h1>
           </mat-grid-tile-footer>
