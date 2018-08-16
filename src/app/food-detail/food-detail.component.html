@@ -16,8 +16,7 @@
     <mat-card class= "leftCard">
 
       <img  mat-card-image [routerLink]="['/fooddetail', next]"
-            src="{{BaseURL + food.image}}" alt={{food.name}}
-            width="400" height="600">
+            src="{{BaseURL + food.image}}" alt={{food.name}}>
       <mat-card-actions>
         <button mat-button [routerLink]="['/fooddetail', prev]"><span class="fa fa-chevron-left fa-lg"></span></button>
         <button mat-button (click) = "goBack()">BACK</button>
