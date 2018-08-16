@@ -23,8 +23,10 @@ connect.then((db) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Point static path to dist
-app.use(express.static(path.join(__dirname, 'dist/Taiwan')));
+// Point static path to distT
+
+
+app.use(express.static(path.join(__dirname, 'dist/taiwan')));
 
 app.use('/cultures', cultureRouter);
 app.use('/foods',foodRouter);
@@ -32,7 +34,7 @@ app.use('/mountains',mountainRouter);
 
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/Taiwan/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/taiwan/index.html'));
 });
 
 
