@@ -40,7 +40,7 @@ exports.jwtPassport = passport.use(new JwtStrategy(opts,
 
 exports.verifyUser = passport.authenticate('jwt', {session: false});
 
-exports.verifyAdmin = (req, res, next) => {s
+exports.verifyAdmin = (req, res, next) => {
       if(req.user === undefined || req.user.admin === undefined || !req.user.admin)
       {
           err = new Error ('not admin');
