@@ -11,6 +11,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - npm install font-awesome@4.7.0 --save
 - npm install --save ngx-restangular@3.0.0
 - npm install mongoose --save
+- npm install passport --save
+- npm install passport-local --save
+- npm install passport-local-mongoose --save
+- npm install passport-jwt --save
 
 
 ## Development server

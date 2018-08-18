@@ -30,6 +30,10 @@
     "mongoose": "^5.2.8",
     "ng-simple-slideshow": "^1.2.3",
     "ngx-restangular": "^3.0.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

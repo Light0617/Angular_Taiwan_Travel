@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const Cultures = require('../models/culture');
+const authenticate = require('../authenticate');
 
 const CultureRouter = express.Router();
 
@@ -19,7 +20,7 @@ CultureRouter.route('/')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
-.post((req, res, next) => {
+.post(authenticate.verifyAdmin, (req, res, next) => {
     Cultures.create(req.body)
     .then((culture) => {
         console.log('Culture Created ', culture);
@@ -29,11 +30,11 @@ CultureRouter.route('/')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
-.put((req, res, next) => {
+.put(authenticate.verifyAdmin, (req, res, next) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /cultures');
 })
-.delete((req, res, next) => {
+.delete(authenticate.verifyAdmin, (req, res, next) => {
     Cultures.remove({})
     .then((resp) => {
         res.statusCode = 200;
@@ -53,11 +54,11 @@ CultureRouter.route('/:cultureId')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
-.post((req, res, next) => {
+.post(authenticate.verifyAdmin, (req, res, next) => {
     res.statusCode = 403;
     res.end('POST operation not supported on /cultures/'+ req.params.cultureId);
 })
-.put((req, res, next) => {
+.put(authenticate.verifyAdmin, (req, res, next) => {
     Cultures.findByIdAndUpdate(req.params.cultureId, {
         $set: req.body
     }, { new: true })
@@ -68,7 +69,7 @@ CultureRouter.route('/:cultureId')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
-.delete((req, res, next) => {
+.delete(authenticate.verifyAdmin, (req, res, next) => {
     Cultures.findByIdAndRemove(req.params.cultureId)
     .then((resp) => {
         res.statusCode = 200;
